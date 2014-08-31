@@ -19,15 +19,17 @@ For use in the browser, use [browserify](https://github.com/substack/node-browse
 To use the module,
 
 ``` javascript
-var lib = require( 'validate.io-boolean' );
+var isBoolean = require( 'validate.io-boolean' );
+
+console.log( isBoolean( false ) );
+// Returns true
+
+console.log( isBoolean( '' ) );
+// Returns false
 ```
 
 
 ## Examples
-
-``` javascript
-var lib = require( 'validate.io-boolean' );
-```
 
 To run the example code from the top-level application directory,
 
