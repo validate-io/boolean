@@ -25,6 +25,7 @@ describe( 'validate.io-boolean', function tests() {
 
 	it( 'should positively validate', function test() {
 		assert.ok( isBoolean( false ) );
+		assert.ok( isBoolean( new Boolean() ) );
 	});
 
 	it( 'should negatively validate', function test() {
