@@ -1,3 +1,5 @@
+/* global it, describe, require */
+'use strict';
 
 // MODULES //
 
@@ -17,8 +19,7 @@ var expect = chai.expect,
 // TESTS //
 
 describe( 'validate.io-boolean', function tests() {
-	'use strict';
-
+	
 	it( 'should export a function', function test() {
 		expect( isBoolean ).to.be.a( 'function' );
 	});
@@ -30,18 +31,18 @@ describe( 'validate.io-boolean', function tests() {
 
 	it( 'should negatively validate', function test() {
 		var values = [
-				5,
-				[],
-				'5',
-				function(){},
-				null,
-				{},
-				NaN,
-				undefined
-			];
+			5,
+			[],
+			'5',
+			function(){},
+			null,
+			{},
+			NaN,
+			undefined
+		];
 
 		for ( var i = 0; i < values.length; i++ ) {
-			assert.ok( !isBoolean( values[i] ) );
+			assert.notOk( isBoolean( values[i] ) );
 		}
 	});
 

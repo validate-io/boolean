@@ -5,7 +5,7 @@ Boolean
 > Validates if a value is a boolean.
 
 
-## Installation
+### Installation
 
 ``` bash
 $ npm install validate.io-boolean
@@ -14,22 +14,36 @@ $ npm install validate.io-boolean
 For use in the browser, use [browserify](https://github.com/substack/node-browserify).
 
 
-## Usage
-
-To use the module,
+### Usage
 
 ``` javascript
 var isBoolean = require( 'validate.io-boolean' );
+```
 
-console.log( isBoolean( false ) );
-// Returns true
+#### isBoolean( value )
 
-console.log( isBoolean( '' ) );
-// Returns false
+Validates if a `value` is a `boolean`.
+
+``` javascript
+var value = false;
+
+var bool = isBoolean( value );
+// returns true
 ```
 
 
-## Examples
+### Examples
+
+``` javascript
+console.log( isBoolean( false ) );
+// returns true
+
+console.log( isBoolean( '' ) );
+// returns false
+
+console.log( isBoolean( new Boolean() ) );
+// returns true
+```
 
 To run the example code from the top-level application directory,
 
@@ -38,11 +52,12 @@ $ node ./examples/index.js
 ```
 
 
+---
 ## Tests
 
 ### Unit
 
-Unit tests use the [Mocha](http://visionmedia.github.io/mocha) test framework with [Chai](http://chaijs.com) assertions. To run the tests, execute the following command in the top-level application directory:
+Unit tests use the [Mocha](http://mocha.js.org) test framework with [Chai](http://chaijs.com) assertions. To run the tests, execute the following command in the top-level application directory:
 
 ``` bash
 $ make test
@@ -62,16 +77,16 @@ $ make test-cov
 Istanbul creates a `./reports/coverage` directory. To access an HTML version of the report,
 
 ``` bash
-$ open reports/coverage/lcov-report/index.html
+$ make view-cov
 ```
 
 
+---
 ## License
 
 [MIT license](http://opensource.org/licenses/MIT). 
 
 
----
 ## Copyright
 
 Copyright &copy; 2014. Athan Reines.

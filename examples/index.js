@@ -1,7 +1,12 @@
+'use strict';
+
 var isBoolean = require( './../lib' );
 
 console.log( isBoolean( false ) );
-// Returns true
+// returns true
 
 console.log( isBoolean( '' ) );
-// Returns false
+// returns false
+
+console.log( isBoolean( new Boolean() ) );
+// returns true
