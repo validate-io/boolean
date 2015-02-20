@@ -30,7 +30,9 @@
     "boolean",
     "bool",
     "true",
-    "false"
+    "false",
+    "isboolean",
+    "is"
   ],
   "bugs": {
     "url": "https://github.com/validate-io/boolean/issues"
